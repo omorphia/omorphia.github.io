@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+compile '/**/*.html.haml' do
+  filter :haml
+  layout '/layout.*'
+end
+
+passthrough '/images/**/*'
+
+compile '/**/*.less' do
+  filter :less
+end
+
+route '/css/*.less' do
+  item.identifier.without_ext + '.css'
+end
+
+compile '/**/*' do
+  write item.identifier.to_s
+end
+
+layout '/**/*', :haml
+
+route '/**/*.html.haml' do
+  item.identifier.without_ext
+end
