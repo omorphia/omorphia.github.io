@@ -3,3 +3,4 @@
 vendor/
 crash.log
 tmp/
+node_modules

@@ -17,9 +17,12 @@
         / Js
         %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"}
         %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"}
+        %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
         %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/galleria.min.js"}
         %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/plugins/flickr/galleria.flickr.min.js"}
-        %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+        %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.4.3/tabletop.min.js"}
+        %script{:src => "js/services.js"}
+        %script{:src => "js/main.js"}
         %script{src: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity: "sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin: "anonymous"}
         %script{src: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity: "sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin: "anonymous"}
         :javascript
@@ -41,7 +44,7 @@
               %img{:alt => "", :src => "images/logo.png"}
           .col-md-6.col-xs-6.col-sm-6
             .menu
-              %nav.navbar.navbar-default{:role => "navigation"}
+              %nav.navbar.navbar-default.navbar-static-top{:role => "navigation"}
                 .container-fluid
                   / Brand and toggle get grouped for better mobile display
                   .navbar-header
@@ -56,7 +59,24 @@
                       %li
                         %a{:href => "#banner"} Home
                       %li
-                        %a{:href => "/services"} Services
+                        %a#services{ data: { toggle: 'collapse', target: '#services-drawer' }, role: 'button', aria: {controls: "services-drawer", expanded: false} }
+                          Services
+                          %span.caret
+                        -#%ul.dropdown-menu#services-dropdown
+                          %li
+                            %a{ href: 'services/hair.html' } Hair
+                          %li
+                            %a{ href: 'services/beauty.html' } Beauty
+                          %li
+                            %a{ href: 'services/hands-feet.html' } Hands and Feet
+                          %li
+                            %a{ href: 'services/body.html' } Body
+                          %li
+                            %a{ href: 'services/spa.html' } Spa
+                          %li
+                            %a{ href: 'services/laser.html' } Laser
+                          %li
+                            %a{ href: 'services/slimming.html' } Slimming
                       %li
                         %a{:href => "/gallery"} Gallery
                       %li
@@ -79,6 +99,11 @@
               %li
                 %a{:href => "#"}
                   %i.fa.fa-google-plus
+    #services-drawer.collapse
+      .well
+        foobar
+        asdasd
+        asdasdasd
     = yield
     %footer.wow.fadeInUp{"data-wow-delay" => ".8s"}
       .container.text-center

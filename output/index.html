@@ -17,9 +17,12 @@
         <!-- Js -->
         <script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'></script>
+        <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/galleria.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/plugins/flickr/galleria.flickr.min.js'></script>
-        <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.4.3/tabletop.min.js'></script>
+        <script src='js/services.js'></script>
+        <script src='js/main.js'></script>
         <script crossorigin='anonymous' integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS' src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
         <script crossorigin='anonymous' integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS' src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
         <script>
@@ -47,7 +50,7 @@
           </div>
           <div class='col-md-6 col-xs-6 col-sm-6'>
             <div class='menu'>
-              <nav class='navbar navbar-default' role='navigation'>
+              <nav class='navbar navbar-default navbar-static-top' role='navigation'>
                 <div class='container-fluid'>
                   <!-- Brand and toggle get grouped for better mobile display -->
                   <div class='navbar-header'>
@@ -65,7 +68,10 @@
                         <a href='#banner'>Home</a>
                       </li>
                       <li>
-                        <a href='/services'>Services</a>
+                        <a aria-controls='services-drawer' data-target='#services-drawer' data-toggle='collapse' id='services' role='button'>
+                          Services
+                          <span class='caret'></span>
+                        </a>
                       </li>
                       <li>
                         <a href='/gallery'>Gallery</a>
@@ -111,6 +117,13 @@
         </div>
       </div>
     </header>
+    <div class='collapse' id='services-drawer'>
+      <div class='well'>
+        foobar
+        asdasd
+        asdasdasd
+      </div>
+    </div>
     <section class='wow fadeInUp' id='banner'>
       <div class='container'>
         <div class='row'>

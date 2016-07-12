@@ -38,7 +38,7 @@ ul li {
 .menu .navbar-default {
   background: none;
   border-color: transparent;
-  margin-bottom: 0;
+  /*margin-bottom: 0;*/
   text-align: center;
 }
 .menu .navbar-default .navbar-nav > li > a {

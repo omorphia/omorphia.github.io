@@ -11,6 +11,14 @@ compile '/**/*.less' do
   filter :less
 end
 
+compile '/**/*.js.coffee' do
+  filter :coffeescript
+end
+
+route '/js/*.js.coffee' do
+  item.identifier.without_ext
+end
+
 route '/css/*.less' do
   item.identifier.without_ext + '.css'
 end
