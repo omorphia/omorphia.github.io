@@ -4,3 +4,6 @@ vendor/
 crash.log
 tmp/
 node_modules
+.envrc
+*-cropped.*
+output/
