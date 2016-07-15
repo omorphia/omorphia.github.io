@@ -34,6 +34,10 @@ GEM
       tilt
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
+    handlebars (0.8.0)
+      handlebars-source (~> 4.0.5)
+      therubyracer (~> 0.12.1)
+    handlebars-source (4.0.5)
     json (2.0.1)
     less (2.6.0)
       commonjs (~> 0.2.7)
@@ -77,6 +81,7 @@ DEPENDENCIES
   coffee-script
   guard-nanoc
   haml
+  handlebars
   json
   less
   nanoc

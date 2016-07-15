@@ -1,0 +1,13 @@
+.container
+  .col-md-8.col-md-offset-2
+    .galleria
+%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/galleria.min.js"}
+%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/themes/classic/galleria.classic.min.js"}
+%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/plugins/flickr/galleria.flickr.min.js"}
+:coffee
+  Galleria.run '.galleria',
+    flickr: 'search:galleria'
+    lightbox: true
+    responsive: true
+    #flickr: 'set:308783'
+    flickrOptions: sort: 'date-posted-asc'

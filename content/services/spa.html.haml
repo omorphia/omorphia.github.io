@@ -1,0 +1,24 @@
+.container#service
+
+:coffee
+  init = ->
+    Tabletop.init
+      key: spreadsheet_key
+      callback: showInfo
+      simpleSheet: false
+    return
+
+  showInfo = (data, tabletop) ->
+    processed_data = _.reduce(data['Spa'].elements, ((memo, val, i, elements) ->
+      memo[val.Service] = memo[val.Service] || []
+      memo[val.Service].push(_.omit(val, 'Service'))
+      return memo
+    ), {})
+    html = Handlebars.templates['spa'](processed_data)
+    $("#service").append(html);
+    return processed_data
+
+  $ ->
+    init()
+
+  spreadsheet_key = '1j0LdzGrtjKGadzzDS75Jiu7exAAMbv1OHQfLjpBslvs'

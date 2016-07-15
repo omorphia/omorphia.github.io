@@ -1,5 +1,14 @@
 #!/usr/bin/env ruby
 
+compile '/partials/*.html.haml' do
+  filter :haml
+end
+compile '/partials/*' do
+end
+route '/partials/*' do
+  nil
+end
+
 compile '/**/*.html.haml' do
   filter :haml
   layout '/layout.*'
@@ -30,5 +39,15 @@ end
 layout '/**/*', :haml
 
 route '/**/*.html.haml' do
-  item.identifier.without_ext
+  if !@item.identifier.components.last.end_with?('index.html.haml')
+    item.identifier.without_exts + '/index.html'
+  else
+    item.identifier.without_ext
+  end
 end
+
+postprocess do
+  system('./node_modules/.bin/handlebars content/partials/*.handlebars -m -f output/js/templates.js')
+end
+
+ignore '/js/templates.js'

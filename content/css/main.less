@@ -1,29 +1,30 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,300italic);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700);
+/*@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,300italic);*/
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans);*/
+/*@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700);*/
+@import url(https://fonts.googleapis.com/css?family=Junge|Raleway);
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6,p {
-  font-family: 'Source Sans Pro', sans-serif;
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Junge', serif;
 }
 h1 {
-  font-size: 52px;
+  font-size: 4rem;
 }
 h2 {
-  font-size: 38px;
+  font-size: 3rem;
   font-weight: 200;
 }
 h3 {
-  font-size: 25px;
+  font-size: 2rem;
 }
 h4 {
-  font-size: 20px;
+  font-size: 2rem;
 }
 p {
-  font-size:  15px;
+  font-size: 1.5rem;
 }
 
 ul {
@@ -32,32 +33,30 @@ ul {
     list-style:none;
   }
 }
-.menu {
-  .navbar-default {
-    background: none;
-    border-color: transparent;
-    /*margin-bottom: 0;*/
-    text-align: center;
-  }
-  .navbar-default .navbar-nav>li>a {
-    font-size: 15px;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 200;
-    color: #666;
-    padding:5px 15px;
-    &:hover {
-      color: #f48e5c;
-    }
-  }
-  .navbar-nav {
-    float: none;
-    display: inline-block;
-  }
-  .navbar {
-    min-height: 0;
+.navbar-default {
+  background: none;
+  border-color: transparent;
+  margin-bottom: 0;
+  text-align: center;
+}
+.navbar-default .navbar-nav>li>a {
+  font-size: 3rem;
+  font-family: 'Junge', serif;
+  font-weight: 200;
+  color: #666;
+  /*padding:5px 15px;*/
+  &:hover {
+    color: #f48e5c;
   }
 }
-header {
+.navbar-nav {
+  float: none;
+  display: inline-block;
+}
+.navbar {
+  /*min-height: 0;*/
+}
+nav {
   -webkit-box-shadow: 0 0 4px rgba(0,0,0,.2);
   -moz-box-shadow: 0 0 4px rgba(0,0,0,.2);
   -ms-box-shadow: 0 0 4px rgba(0,0,0,.2);
@@ -70,12 +69,10 @@ header {
   z-index: 999;
   .logo {
     display: inline-block;
-    margin-top: 8px;
   }
   .social-info {
     margin-bottom: 0;
     padding-top:8px;
-    text-align: right;
     li {
       display: inline-block;
       &:first-child a {
@@ -87,6 +84,9 @@ header {
         border-right: 1px solid #dedede;
         &:hover {
           color: #f48e5c;
+        }
+        i {
+          font-size: 2.5rem;
         }
       }
     }
@@ -118,62 +118,7 @@ header {
       color: #999;
       font-weight: 300;
     }
-    .download-btn {
-      li {
-        display: inline-block;
-        a {
-          color: #fff;
-          border: none;
-          border-radius: 0;
-          padding: 10px 28px 13px;
-          font-size: 18px;
-          i {
-            margin-right: 10px;
-            font-size: 20px;
-          }
-        }
-        .btn-apple {
-          background: #8883bc;
-          border:1px solid transparent;
-          -webkit-transition: .2s all;
-          -o-transition: .2s all;
-          transition: .2s all;
-          &:hover {
-            color: #8883bc;
-            background: #fff;
-            border:1px solid #8883bc;
-          }
-        }
-        .btn-andriod {
-          background: #6fbf39;
-          border:1px solid transparent;
-          -webkit-transition: .2s all;
-          -o-transition: .2s all;
-          transition: .2s all;
-          &:hover {
-            color: #6fbf39;
-            background: #fff;
-            border:1px solid #6fbf39;
-          }
-
-        }
-        .btn-windows {
-          background: #00afec;
-          border:1px solid transparent;
-          -webkit-transition: .2s all;
-          -o-transition: .2s all;
-          transition: .2s all;
-          &:hover {
-            color: #00afec;
-            background: #fff;
-            border:1px solid #00afec;
-          }
-        }
-      }
-
-    }
   }
-
 }
 
 #service {
@@ -278,7 +223,7 @@ header {
   .block {
     h2 {
       padding-top: 70px;
-      color: #444;
+      color: #111;
     }
     p {
       line-height: 32px;
@@ -361,7 +306,7 @@ header {
   }
 }
 
-footer {
+footer#main-footer {
   background: #f9f9f9;
   border-top: 1px solid #e8e8e8;
   padding:40px 0 20px;
@@ -377,9 +322,16 @@ footer {
   }
 }
 
-section {
-  padding-top: 53px
-}
-
 #services-drawer {
 }
+
+.hovereffect h2.text-white {
+  color: #FFF
+}
+
+.galleria {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  min-height: 600px;
+}
+

@@ -12,81 +12,55 @@
         %link{href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", integrity: "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin: "anonymous", rel: "stylesheet"}
         %link{:href => "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css", :rel => "stylesheet"}
         %link{:href => "https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css", :rel => "stylesheet"}
-        %link{:href => "css/main.css", :rel => "stylesheet"}
-        %link{:href => "css/responsive.css", :rel => "stylesheet"}
+        %link{:href => "/css/main.css", :rel => "stylesheet"}
+        %link{:href => "/css/responsive.css", :rel => "stylesheet"}
+        %link{:href => "/css/hover.css", :rel => "stylesheet"}
         / Js
         %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"}
         %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"}
         %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
-        %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/galleria.min.js"}
-        %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/plugins/flickr/galleria.flickr.min.js"}
+        %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"}
         %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.4.3/tabletop.min.js"}
-        %script{:src => "js/services.js"}
-        %script{:src => "js/main.js"}
-        %script{src: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity: "sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin: "anonymous"}
+        %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.runtime.min.js"}
+        %script{:src => "/js/services.js"}
+        %script{:src => "/js/main.js"}
+        %script{:src => "/js/templates.js"}
         %script{src: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity: "sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin: "anonymous"}
         :javascript
           window.jQuery || document.write('<\/script>')
             new WOW({mobile: false}
               ).init();
-                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-                    ga('create', 'UA-57708809-1', 'auto');
-                    ga('send', 'pageview');
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-57708809-1', 'auto');
+          ga('send', 'pageview');
   %body
-    %header
+    %nav.navbar.navbar-default.navbar-static-top{:role => "navigation"}
       .container
-        .row
-          .col-md-3.col-xs-6.col-sm-3
-            %a.logo{:href => "#"}
-              %img{:alt => "", :src => "images/logo.png"}
-          .col-md-6.col-xs-6.col-sm-6
-            .menu
-              %nav.navbar.navbar-default.navbar-static-top{:role => "navigation"}
-                .container-fluid
-                  / Brand and toggle get grouped for better mobile display
-                  .navbar-header
-                    %button.navbar-toggle.collapsed{"data-target" => "#nav", "data-toggle" => "collapse", :type => "button"}
-                      %span.sr-only Toggle navigation
-                      %span.icon-bar
-                      %span.icon-bar
-                      %span.icon-bar
-                  / Collect the nav links, forms, and other content for toggling
-                  #nav.collapse.navbar-collapse
-                    %ul.nav.navbar-nav
-                      %li
-                        %a{:href => "#banner"} Home
-                      %li
-                        %a#services{ data: { toggle: 'collapse', target: '#services-drawer' }, role: 'button', aria: {controls: "services-drawer", expanded: false} }
-                          Services
-                          %span.caret
-                        -#%ul.dropdown-menu#services-dropdown
-                          %li
-                            %a{ href: 'services/hair.html' } Hair
-                          %li
-                            %a{ href: 'services/beauty.html' } Beauty
-                          %li
-                            %a{ href: 'services/hands-feet.html' } Hands and Feet
-                          %li
-                            %a{ href: 'services/body.html' } Body
-                          %li
-                            %a{ href: 'services/spa.html' } Spa
-                          %li
-                            %a{ href: 'services/laser.html' } Laser
-                          %li
-                            %a{ href: 'services/slimming.html' } Slimming
-                      %li
-                        %a{:href => "/gallery"} Gallery
-                      %li
-                        %a{:href => "#utility"} Utility
-                      %li
-                        %a{:href => "#subscribe"} Subscribe
-                  / /.navbar-collapse
-                / /.container-fluid
-          .col-md-3.col-xs-12.col-sm-3
-            %ul.social-info
+        / Brand and toggle get grouped for better mobile display
+        .navbar-header
+          %button.navbar-toggle.collapsed{"data-target" => "#nav", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.logo{:href => "/"}
+            %img.img-responsive{:alt => "", :src => "/assets/images/logo.png"}
+        / Collect the nav links, forms, and other content for toggling
+        #nav.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li
+              %a#services{ data: { toggle: 'collapse', target: '#services-drawer' }, role: 'button', aria: {controls: "services-drawer", expanded: false} }
+                Services
+                %span.caret
+            %li
+              %a{:href => "/gallery"} Gallery
+            %li
+              %a{:href => "/contact"} Contact
+          .nav.navbar-nav.navbar-right
+            %ul.social-info.nav.navbar-nav
               %li
                 %a{:href => "#"}
                   %i.fa.fa-facebook
@@ -99,16 +73,19 @@
               %li
                 %a{:href => "#"}
                   %i.fa.fa-google-plus
-    #services-drawer.collapse
-      .well
-        foobar
-        asdasd
-        asdasdasd
+    = @items['/partials/services_drawer.html.haml'].compiled_content
     = yield
-    %footer.wow.fadeInUp{"data-wow-delay" => ".8s"}
+    %footer#main-footer.wow.fadeInUp{"data-wow-delay" => ".8s"}
       .container.text-center
         .row
           .col-md-12
             %a.footer-logo{:href => "#"}
-              %img.img-responsive{:alt => "", :src => "images/footer-logo.png"}
+              %img.img-responsive{:alt => "", :src => "/assets/images/logo.png"}
             %p Copyright © 2016 Omorphia Ltd. All rights reserved.
+        .row
+          Photo credit:
+          %a{:href => "https://www.flickr.com/photos/27429206@N02/3967683569/"} Vladimir Morozov
+          via
+          %a{:href => "https://visualhunt.com"} VisualHunt.com
+          \/
+          %a{:href => "http://creativecommons.org/licenses/by/2.0/"} CC BY

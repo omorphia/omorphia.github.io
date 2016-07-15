@@ -1,0 +1,19 @@
+.container#service
+
+:coffee
+  init = ->
+    Tabletop.init
+      key: spreadsheet_key
+      callback: showInfo
+      simpleSheet: false
+    return
+
+  showInfo = (data, tabletop) ->
+    html = Handlebars.templates['slimming'](data['Slimming'].elements)
+    $("#service").append(html);
+    return data
+
+  $ ->
+    init()
+
+  spreadsheet_key = '1j0LdzGrtjKGadzzDS75Jiu7exAAMbv1OHQfLjpBslvs'

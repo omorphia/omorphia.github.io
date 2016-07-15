@@ -9,7 +9,7 @@ showInfo = (data, tabletop) ->
   console.log data
   return
 
-$ ->
-  init()
+#$ ->
+  #init()
 
 spreadsheet_key = '1j0LdzGrtjKGadzzDS75Jiu7exAAMbv1OHQfLjpBslvs'
