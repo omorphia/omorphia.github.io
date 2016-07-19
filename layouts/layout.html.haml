@@ -12,6 +12,7 @@
         %link{href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", integrity: "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin: "anonymous", rel: "stylesheet"}
         %link{:href => "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css", :rel => "stylesheet"}
         %link{:href => "https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css", :rel => "stylesheet"}
+        %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.1/bootstrap-material-design.min.css", :rel => "stylesheet"}
         %link{:href => "/css/main.css", :rel => "stylesheet"}
         %link{:href => "/css/responsive.css", :rel => "stylesheet"}
         %link{:href => "/css/hover.css", :rel => "stylesheet"}
@@ -46,7 +47,9 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.logo{:href => "/"}
+          %a.logo.hidden-xs{:href => "/"}
+            %img.img-responsive{:alt => "", :src => "/assets/images/logo.png"}
+          %a.logo.visible-xs-inline-block{:href => "/"}
             %img.img-responsive{:alt => "", :src => "/assets/images/logo.png"}
         / Collect the nav links, forms, and other content for toggling
         #nav.collapse.navbar-collapse
@@ -75,17 +78,5 @@
                   %i.fa.fa-google-plus
     = @items['/partials/services_drawer.html.haml'].compiled_content
     = yield
-    %footer#main-footer.wow.fadeInUp{"data-wow-delay" => ".8s"}
-      .container.text-center
-        .row
-          .col-md-12
-            %a.footer-logo{:href => "#"}
-              %img.img-responsive{:alt => "", :src => "/assets/images/logo.png"}
-            %p Copyright © 2016 Omorphia Ltd. All rights reserved.
-        .row
-          Photo credit:
-          %a{:href => "https://www.flickr.com/photos/27429206@N02/3967683569/"} Vladimir Morozov
-          via
-          %a{:href => "https://visualhunt.com"} VisualHunt.com
-          \/
-          %a{:href => "http://creativecommons.org/licenses/by/2.0/"} CC BY
+    = @items['/partials/footer.html.haml'].compiled_content
+

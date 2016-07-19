@@ -12,12 +12,14 @@ end
 compile '/**/*.html.haml' do
   filter :haml
   layout '/layout.*'
+  filter :relativize_paths, type: :html
 end
 
 passthrough '/images/**/*'
 
 compile '/**/*.less' do
   filter :less
+  filter :relativize_paths, type: :css
 end
 
 compile '/**/*.js.coffee' do

@@ -46,7 +46,7 @@ ul {
   color: #666;
   /*padding:5px 15px;*/
   &:hover {
-    color: #f48e5c;
+    color: #d4aa00;
   }
 }
 .navbar-nav {
@@ -67,9 +67,12 @@ nav {
   position: fixed;
   width: 100%;
   z-index: 999;
-  .logo {
-    display: inline-block;
+  .logo.hidden-xs {
+    /*position: absolute;*/
   }
+  /*.logo.hidden-sm.hidden-lg.hidden-md {*/
+    /*display: inline-block;*/
+  /*}*/
   .social-info {
     margin-bottom: 0;
     padding-top:8px;
@@ -83,7 +86,7 @@ nav {
         padding:3px 8px;
         border-right: 1px solid #dedede;
         &:hover {
-          color: #f48e5c;
+          color: #d4aa00;
         }
         i {
           font-size: 2.5rem;
@@ -137,15 +140,15 @@ nav {
       color: #fff;
     }
     &:hover h3 {
-      color: #f48e5c;
+      color: #d4aa00;
     }
     &:hover .icon {
       border: 1px solid #FFFFFF;
-      background: #f48e5c;
+      background: #d4aa00;
       color: #fff;
-      -webkit-box-shadow: 0 0 0px 2px #f48e5c;
-      -moz-box-shadow: 0 0 0px 2px #f48e5c;
-      box-shadow: 0 0 0px 2px #f48e5c;
+      -webkit-box-shadow: 0 0 0px 2px #d4aa00;
+      -moz-box-shadow: 0 0 0px 2px #d4aa00;
+      box-shadow: 0 0 0px 2px #d4aa00;
     }
     .icon {
       width: 90px;
@@ -191,12 +194,12 @@ nav {
     .icon {
       padding-right: 22px;
       i {
-        color: #f48e5c;
+        color: #d4aa00;
         font-size: 30px;
       }
     }
     h4 {
-      color: #f48e5c;
+      color: #d4aa00;
       margin-bottom: 0;
       font-weight: 300;
       margin-bottom: 8px;
@@ -305,11 +308,36 @@ nav {
     }
   }
 }
+.footer-border {
+  background-image: url(/assets/images/border.png);
+  height: 54px;
+  width: 100%;
+}
+.footer-silhouette {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
+  height: 211px;
+  max-width: 850px;
+  margin-top: 15px;
+  background-image: url(/assets/images/silhouette.png);
+  background-size: cover;
+  position: relative;
+  background-position: center center;
+
+}
 
 footer#main-footer {
-  background: #f9f9f9;
-  border-top: 1px solid #e8e8e8;
-  padding:40px 0 20px;
+  /*background: #f9f9f9;*/
+  /*background-color: #e5d1a9;*/
+  /*background-color: #008eda;*/
+  background-color: rgba(30, 158, 221, 0.45);
+  background-repeat: no-repeat;
+  /*border-top: 1px solid #e8e8e8;*/
+  padding:80px 0 80px;
+  /*height: 268px;*/
   .footer-logo {
     margin-bottom: 15px;
     display: inline-block;
@@ -335,3 +363,5 @@ footer#main-footer {
   min-height: 600px;
 }
 
+#main-footer {
+}
