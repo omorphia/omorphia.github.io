@@ -10,10 +10,10 @@
     return
 
   showInfo = (data, tabletop) ->
-    html = Handlebars.templates['slimming'](data['Slimming'].elements)
+    html = Handlebars.templates['laser'](data['Laser'].elements)
     $("#service").append(html);
     NProgress.done()
-    return data
+    return processed_data
 
   $ ->
     init()

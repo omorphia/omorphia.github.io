@@ -2,6 +2,7 @@
 
 :coffee
   init = ->
+    NProgress.start()
     Tabletop.init
       key: spreadsheet_key
       callback: showInfo
@@ -11,6 +12,7 @@
   showInfo = (data, tabletop) ->
     html = Handlebars.templates['hair'](data['Hair'].elements)
     $("#service").append(html);
+    NProgress.done()
     return data
 
   $ ->

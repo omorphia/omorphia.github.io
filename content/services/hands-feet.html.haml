@@ -2,6 +2,7 @@
 
 :coffee
   init = ->
+    NProgress.start()
     Tabletop.init
       key: spreadsheet_key
       callback: showInfo
@@ -9,7 +10,6 @@
     return
 
   showInfo = (data, tabletop) ->
-    console.log data
     processed_data = _.reduce(data['Hands & Feet'].elements, ((memo, val, i, elements) ->
       memo[val.Service] = memo[val.Service] || []
       memo[val.Service].push(_.omit(val, 'Service'))
@@ -17,6 +17,7 @@
     ), {})
     html = Handlebars.templates['hands-feet'](processed_data)
     $("#service").append(html);
+    NProgress.done()
     return processed_data
 
   $ ->

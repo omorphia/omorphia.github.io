@@ -10,10 +10,15 @@
     return
 
   showInfo = (data, tabletop) ->
-    html = Handlebars.templates['slimming'](data['Slimming'].elements)
+    processed_data = _.reduce(data['Face'].elements, ((memo, val, i, elements) ->
+      memo[val.Service] = memo[val.Service] || []
+      memo[val.Service].push(_.omit(val, 'Service'))
+      return memo
+    ), {})
+    html = Handlebars.templates['face'](processed_data)
     $("#service").append(html);
     NProgress.done()
-    return data
+    return processed_data
 
   $ ->
     init()
