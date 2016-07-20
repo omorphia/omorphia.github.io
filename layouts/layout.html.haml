@@ -3,7 +3,9 @@
   %head
     %meta{:charset => "utf-8"}
       %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
-        %title App plus
+        %title
+          Omorphia -
+          = @item.identifier.without_exts == '/index' ? 'Home' : @item.identifier.without_exts.split('/').last.capitalize
         %meta{:content => "", :name => "description"}
         %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
         / Place favicon.ico and apple-touch-icon.png in the root directory
