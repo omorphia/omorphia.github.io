@@ -51,5 +51,3 @@ end
 postprocess do
   system('./node_modules/.bin/handlebars content/partials/*.handlebars -m -f output/js/templates.js')
 end
-
-ignore '/js/templates.js'
