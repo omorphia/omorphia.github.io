@@ -3,11 +3,14 @@
     .galleria
 %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/galleria.min.js"}
 %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/themes/classic/galleria.classic.min.js"}
-%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/plugins/flickr/galleria.flickr.min.js"}
+%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.7/plugins/history/galleria.history.min.js"}
+%script{:src => "/js/facebook/galleria.facebook.js"}
 :coffee
   Galleria.run '.galleria',
-    flickr: 'search:galleria'
+    facebook: 'album:840116056089698'
     lightbox: true
     responsive: true
-    #flickr: 'set:308783'
-    flickrOptions: sort: 'date-posted-asc'
+    facebookOptions: {
+      max: 50,
+      facebook_access_token: '1621804568133680|Q1sLaLs3QtCk3Ze6fTmS_P72imI'
+    }
