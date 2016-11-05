@@ -2,7 +2,8 @@
 /*@import url(http://fonts.googleapis.com/css?family=Open+Sans);*/
 /*@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700);*/
 @import url(https://fonts.googleapis.com/css?family=Junge|Raleway);
-
+@gold: #f3d45a;
+@maroon: #863b1d;
 body {
   font-family: 'Raleway', sans-serif;
 }
@@ -41,13 +42,15 @@ ul {
   box-shadow: 0 2px 5px rgba(0,0,0,0.26);
 }
 .navbar-default .navbar-nav>li>a {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: 'Junge', serif;
   font-weight: 200;
   color: #666;
   /*padding:5px 15px;*/
+  border-radius: 3px;
   &:hover {
-    color: #d4aa00;
+    background-color: @gold;
+    color: @maroon;
   }
 }
 .navbar-nav {
@@ -87,7 +90,7 @@ nav {
         padding:3px 8px;
         border-right: 1px solid #dedede;
         &:hover {
-          color: #d4aa00;
+          color: @gold;
         }
         i {
           font-size: 2.5rem;
@@ -102,22 +105,26 @@ nav {
 #banner {
   background-size: cover;
   position: relative;
-  padding:100px 0;
+  /*padding-top: 100px;*/
   .app-img {
     padding-top: 10px;
   }
   .block>p {
-    margin-bottom: 65px;
   }
   .block {
-    padding-top: 10px;
+    padding-top: 40px;
     h1 {
       margin-bottom: 18px;
       line-height: 55px;
-      color: #262b31;
+      color: @maroon;
       font-weight: 300;
     }
+    img {
+      margin: auto;
+    }
     p {
+      margin-top: 30px;
+      margin-bottom: 60px;
       font-size: 20px;
       color: #999;
       font-weight: 300;
@@ -141,15 +148,15 @@ nav {
       color: #fff;
     }
     &:hover h3 {
-      color: #d4aa00;
+      color: @gold;
     }
     &:hover .icon {
       border: 1px solid #FFFFFF;
-      background: #d4aa00;
+      background: @gold;
       color: #fff;
-      -webkit-box-shadow: 0 0 0px 2px #d4aa00;
-      -moz-box-shadow: 0 0 0px 2px #d4aa00;
-      box-shadow: 0 0 0px 2px #d4aa00;
+      -webkit-box-shadow: 0 0 0px 2px @gold;
+      -moz-box-shadow: 0 0 0px 2px @gold;
+      box-shadow: 0 0 0px 2px @gold;
     }
     .icon {
       width: 90px;
@@ -195,12 +202,12 @@ nav {
     .icon {
       padding-right: 22px;
       i {
-        color: #d4aa00;
+        color: @gold;
         font-size: 30px;
       }
     }
     h4 {
-      color: #d4aa00;
+      color: @gold;
       margin-bottom: 0;
       font-weight: 300;
       margin-bottom: 8px;
@@ -359,7 +366,6 @@ footer#main-footer {
 }
 
 .galleria {
-  padding-top: 30px;
   padding-bottom: 30px;
   min-height: 600px;
 }
@@ -373,8 +379,100 @@ footer#main-footer {
   border-bottom: 1px grey solid;
 }
 .text-gold {
-  color: #d4aa00;
+  color: #f1da42;
 }
 .text-blue {
   color: #008eda;
+}
+.img-center {
+  margin: 0 auto;
+}
+.team-member {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+.top-element-padding {
+  padding-top: 30px;
+}
+.center-pills {
+  display: inline-block;
+}
+.galleria-container.galleria-theme-classic {
+  background: none;
+}
+.galleria-thumbnails {
+  margin: auto;
+}
+.service-title {
+  position: relative;
+  background: #5C97FF;
+  overflow: hidden;
+  &#slimming {
+    background: #fff;
+    h1 {
+      color: dimgray;
+    }
+    img {
+      top: -70%;
+      opacity: 0.4;
+    }
+  }
+  &#skin {
+    background: #fff;
+    h1 {
+      color: dimgray;
+    }
+    img {
+      top: 0;
+      opacity: 0.4;
+    }
+  }
+  h1 {
+    padding: 50px;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    color: #fff;
+  }
+  img {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    opacity: 0.6;
+  }
+}
+.text-black {
+  color: #6f6f6f;
+}
+
+.carousel-inner {
+  &> .item {
+    &> img {
+      display: inline;
+    }
+  }
+  width: 500%;
+}
+
+.swiper-container {
+  width: 100%;
+}
+.swiper-slide {
+  width: 33%;
+}
+.page-header {
+  color: @maroon;
+}
+.text-maroon {
+  color: @maroon;
+}
+
+.swiper-button-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+}
+.swiper-button-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'><path%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F><%2Fsvg>")
 }

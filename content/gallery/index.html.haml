@@ -1,0 +1,31 @@
+.container
+  = render '/gallery_nav.*', gallery_item: @item
+  .col-md-8.col-md-offset-2
+    .galleria
+      %img{src: '/assets/images/site/1.jpg'}
+      %img{src: '/assets/images/site/2.jpg'}
+      %img{src: '/assets/images/site/3.jpg'}
+      %img{src: '/assets/images/site/4.jpg'}
+      %img{src: '/assets/images/site/5.jpg'}
+      %img{src: '/assets/images/site/6.jpg'}
+      %img{src: '/assets/images/site/7.jpg'}
+      %img{src: '/assets/images/site/8.jpg'}
+      %img{src: '/assets/images/site/9.jpg'}
+      %img{src: '/assets/images/site/10.jpg'}
+      %img{src: '/assets/images/site/11.jpg'}
+      %img{src: '/assets/images/site/12.jpg'}
+      %img{src: '/assets/images/site/13.jpg'}
+      %img{src: '/assets/images/site/14.jpg'}
+      %img{src: '/assets/images/site/15.jpg'}
+      %img{src: '/assets/images/site/16.jpg'}
+      %img{src: '/assets/images/site/17.jpg'}
+      %img{src: '/assets/images/site/18.jpg'}
+%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/galleria.min.js"}
+%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/themes/classic/galleria.classic.min.js"}
+%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.7/plugins/history/galleria.history.min.js"}
+%script{:src => "/js/facebook/galleria.facebook.js"}
+:coffee
+  Galleria.run '.galleria',
+    lightbox: true
+    responsive: true
+    autoplay: true

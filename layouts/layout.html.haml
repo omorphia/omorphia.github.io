@@ -17,6 +17,7 @@
         %link{:href => "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css", :rel => "stylesheet"}
         %link{:href => "https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css", :rel => "stylesheet"}
         %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css", :rel => "stylesheet"}
+        %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css", :rel => "stylesheet"}
         %link{:href => "/css/main.css", :rel => "stylesheet"}
         %link{:href => "/css/responsive.css", :rel => "stylesheet"}
         %link{:href => "/css/hover.css", :rel => "stylesheet"}
@@ -28,6 +29,7 @@
         %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.4.3/tabletop.min.js"}
         %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.runtime.min.js"}
         %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"}
+        %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.jquery.min.js"}
         %script{:src => "/js/services.js"}
         %script{:src => "/js/main.js"}
         %script{:src => "/js/templates.js"}
@@ -60,6 +62,8 @@
         #nav.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li
+              %a{:href => "/about"} About
+            %li
               %a#services{ data: { toggle: 'collapse', target: '#services-drawer' }, role: 'button', aria: {controls: "services-drawer", expanded: false} }
                 Services
                 %span.caret
@@ -73,14 +77,8 @@
                 %a{:href => "https://facebook.com/Omorphia-wellness-center-124794571292988/"}
                   %i.fa.fa-facebook
               %li
-                %a{:href => "#"}
-                  %i.fa.fa-twitter
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-linkedin
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-google-plus
+                %a{:href => "https://www.instagram.com/omorphiasalonpune/"}
+                  %i.fa.fa-instagram
     = @items['/partials/services_drawer.html.haml'].compiled_content
     = yield
     = @items['/partials/footer.html.haml'].compiled_content
