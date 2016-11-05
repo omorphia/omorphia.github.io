@@ -43,14 +43,16 @@ ul li {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 .navbar-default .navbar-nav > li > a {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: 'Junge', serif;
   font-weight: 200;
   color: #666;
   /*padding:5px 15px;*/
+  border-radius: 3px;
 }
 .navbar-default .navbar-nav > li > a:hover {
-  color: #d4aa00;
+  background-color: #f3d45a;
+  color: #863b1d;
 }
 .navbar-nav {
   float: none;
@@ -93,7 +95,7 @@ nav .social-info li a {
   border-right: 1px solid #dedede;
 }
 nav .social-info li a:hover {
-  color: #d4aa00;
+  color: #f3d45a;
 }
 nav .social-info li a i {
   font-size: 2.5rem;
@@ -101,24 +103,26 @@ nav .social-info li a i {
 #banner {
   background-size: cover;
   position: relative;
-  padding: 100px 0;
+  /*padding-top: 100px;*/
 }
 #banner .app-img {
   padding-top: 10px;
 }
-#banner .block > p {
-  margin-bottom: 65px;
-}
 #banner .block {
-  padding-top: 10px;
+  padding-top: 40px;
 }
 #banner .block h1 {
   margin-bottom: 18px;
   line-height: 55px;
-  color: #262b31;
+  color: #863b1d;
   font-weight: 300;
 }
+#banner .block img {
+  margin: auto;
+}
 #banner .block p {
+  margin-top: 30px;
+  margin-bottom: 60px;
   font-size: 20px;
   color: #999;
   font-weight: 300;
@@ -129,25 +133,24 @@ nav .social-info li a i {
 #service .service-wrapper {
   border-top: 1px solid #dedede;
   border-bottom: 1px solid #dedede;
-  padding: 110px 0;
+  padding: 30px 0;
 }
 #service .block {
-  cursor: pointer;
   text-align: center;
 }
 #service .block:hover .icon i {
   color: #fff;
 }
 #service .block:hover h3 {
-  color: #d4aa00;
+  color: #f3d45a;
 }
 #service .block:hover .icon {
   border: 1px solid #FFFFFF;
-  background: #d4aa00;
+  background: #f3d45a;
   color: #fff;
-  -webkit-box-shadow: 0 0 0px 2px #d4aa00;
-  -moz-box-shadow: 0 0 0px 2px #d4aa00;
-  box-shadow: 0 0 0px 2px #d4aa00;
+  -webkit-box-shadow: 0 0 0px 2px #f3d45a;
+  -moz-box-shadow: 0 0 0px 2px #f3d45a;
+  box-shadow: 0 0 0px 2px #f3d45a;
 }
 #service .block .icon {
   width: 90px;
@@ -191,11 +194,11 @@ nav .social-info li a i {
   padding-right: 22px;
 }
 #feature .feature-item .icon i {
-  color: #d4aa00;
+  color: #f3d45a;
   font-size: 30px;
 }
 #feature .feature-item h4 {
-  color: #d4aa00;
+  color: #f3d45a;
   margin-bottom: 0;
   font-weight: 300;
   margin-bottom: 8px;
@@ -333,7 +336,6 @@ footer#main-footer p {
   color: #ffffff;
 }
 .galleria {
-  padding-top: 30px;
   padding-bottom: 30px;
   min-height: 600px;
 }
@@ -345,8 +347,95 @@ footer#main-footer p {
   border-bottom: 1px grey solid;
 }
 .text-gold {
-  color: #d4aa00;
+  color: #f1da42;
 }
 .text-blue {
   color: #008eda;
+}
+.img-center {
+  margin: 0 auto;
+}
+.team-member {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+.top-element-padding {
+  padding-top: 30px;
+}
+.center-pills {
+  display: inline-block;
+}
+.galleria-container.galleria-theme-classic {
+  background: none;
+}
+.galleria-thumbnails {
+  margin: auto;
+}
+.service-title {
+  position: relative;
+  background: #5C97FF;
+  overflow: hidden;
+}
+.service-title#slimming {
+  background: #fff;
+}
+.service-title#slimming h1 {
+  color: dimgray;
+}
+.service-title#slimming img {
+  top: -70%;
+  opacity: 0.4;
+}
+.service-title#skin {
+  background: #fff;
+}
+.service-title#skin h1 {
+  color: dimgray;
+}
+.service-title#skin img {
+  top: 0;
+  opacity: 0.4;
+}
+.service-title h1 {
+  padding: 50px;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  color: #fff;
+}
+.service-title img {
+  position: absolute;
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  opacity: 0.6;
+}
+.text-black {
+  color: #6f6f6f;
+}
+.carousel-inner {
+  width: 500%;
+}
+.carousel-inner > .item > img {
+  display: inline;
+}
+.swiper-container {
+  width: 100%;
+}
+.swiper-slide {
+  width: 33%;
+}
+.page-header {
+  color: #863b1d;
+}
+.text-maroon {
+  color: #863b1d;
+}
+.swiper-button-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+}
+.swiper-button-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'><path%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F><%2Fsvg>");
 }

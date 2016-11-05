@@ -6,7 +6,7 @@
       <meta content="IE=edge" http-equiv="X-UA-Compatible">
         <title>
           Omorphia -
-          Laser
+          Timeline
         </title>
         <meta content="" name="description">
         <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -81,7 +81,7 @@
               </a>
             </li>
             <li>
-              <a href="../../gallery">Gallery</a>
+              <a href="..">Gallery</a>
             </li>
             <li>
               <a href="../../contact">Contact</a>
@@ -108,7 +108,7 @@
       <div class="well">
         <div class="container">
           <div class="col-md-3 col-sm-6 col-xs-12">
-            <a class="hovereffect card" href="../spa">
+            <a class="hovereffect card" href="../../services/spa">
               <img alt="" class="img-responsive" src="../../assets/images/spa.jpg">
               <div class="overlay">
                 <h2 class="text-white">Spa</h2>
@@ -126,7 +126,7 @@
             </a>
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
-            <a class="hovereffect card" href="../makeup">
+            <a class="hovereffect card" href="../../services/makeup">
               <img alt="" class="img-responsive" src="../../assets/images/makeup.jpg">
               <div class="overlay">
                 <h2 class="text-white">Make-up</h2>
@@ -142,7 +142,7 @@
             </a>
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
-            <a class="hovereffect card" href="../hair">
+            <a class="hovereffect card" href="../../services/hair">
               <img alt="" class="img-responsive" src="../../assets/images/hair.jpg">
               <div class="overlay">
                 <h2>Hair</h2>
@@ -154,7 +154,7 @@
             </a>
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
-            <a class="hovereffect card" href=".">
+            <a class="hovereffect card" href="../../services/laser">
               <img alt="" class="img-responsive" src="../../assets/images/laser.jpg">
               <div class="overlay">
                 <h2 class="text-white">Laser</h2>
@@ -174,7 +174,7 @@
             </a>
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
-            <a class="hovereffect card" href="../slimming">
+            <a class="hovereffect card" href="../../services/slimming">
               <img alt="" class="img-responsive" src="../../assets/images/slimming.jpg">
               <div class="overlay">
                 <h2 class="text-white">Slimming</h2>
@@ -186,7 +186,7 @@
             </a>
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
-            <a class="hovereffect card" href="../face">
+            <a class="hovereffect card" href="../../services/face">
               <img alt="" class="img-responsive" src="../../assets/images/face.jpg">
               <div class="overlay">
                 <h2 class="text-white">Face</h2>
@@ -204,7 +204,7 @@
             </a>
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
-            <a class="hovereffect card" href="../hands-feet">
+            <a class="hovereffect card" href="../../services/hands-feet">
               <img alt="" class="img-responsive" src="../../assets/images/hands.jpg">
               <div class="overlay">
                 <h2 class="text-white">Hands &amp; Feet</h2>
@@ -222,7 +222,7 @@
             </a>
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12">
-            <a class="hovereffect card" href="../skin">
+            <a class="hovereffect card" href="../../services/skin">
               <img alt="" class="img-responsive" src="../../assets/images/skin.jpg">
               <div class="overlay">
                 <h2 class="text-white">Skin</h2>
@@ -244,33 +244,39 @@
         </div>
       </div>
     </div>
-    <div class="container" id="service"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <ul class="nav nav-pills top-element-padding center-pills">
+            <li class="" role="presentation">
+              <a href="..">Premises</a>
+            </li>
+            <li class="active" role="presentation">
+              <a href=".">Timeline</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-8 col-md-offset-2">
+        <div class="galleria"></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/galleria.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/themes/classic/galleria.classic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.7/plugins/history/galleria.history.min.js"></script>
+    <script src="../../js/facebook/galleria.facebook.js"></script>
     <script>
       (function() {
-        var init, showInfo, spreadsheet_key;
-      
-        init = function() {
-          NProgress.start();
-          Tabletop.init({
-            key: spreadsheet_key,
-            callback: showInfo,
-            simpleSheet: false
-          });
-        };
-      
-        showInfo = function(data, tabletop) {
-          var html;
-          html = Handlebars.templates['laser'](data['Laser'].elements);
-          $("#service").append(html);
-          NProgress.done();
-          return processed_data;
-        };
-      
-        $(function() {
-          return init();
+        Galleria.run('.galleria', {
+          facebook: 'album:840116056089698',
+          lightbox: true,
+          responsive: true,
+          autoplay: true,
+          facebookOptions: {
+            max: 50,
+            facebook_access_token: '1621804568133680|Q1sLaLs3QtCk3Ze6fTmS_P72imI'
+          }
         });
-      
-        spreadsheet_key = '1j0LdzGrtjKGadzzDS75Jiu7exAAMbv1OHQfLjpBslvs';
       
       }).call(this);
     </script>

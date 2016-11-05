@@ -19,6 +19,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
         <link href="css/hover.css" rel="stylesheet">
@@ -30,6 +31,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.4.3/tabletop.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.runtime.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.jquery.min.js"></script>
         <script src="js/services.js"></script>
         <script src="js/main.js"></script>
         <script src="js/templates.js"></script>
@@ -70,6 +72,9 @@
         <div class="collapse navbar-collapse" id="nav">
           <ul class="nav navbar-nav">
             <li>
+              <a href="about">About</a>
+            </li>
+            <li>
               <a aria-controls="services-drawer" data-target="#services-drawer" data-toggle="collapse" id="services" role="button">
                 Services
                 <span class="caret"></span>
@@ -90,18 +95,8 @@
                 </a>
               </li>
               <li>
-                <a href="#">
-                  <i class="fa fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-linkedin"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-google-plus"></i>
+                <a href="https://www.instagram.com/omorphiasalonpune/">
+                  <i class="fa fa-instagram"></i>
                 </a>
               </li>
             </ul>
@@ -252,16 +247,9 @@
     <section class="wow fadeInUp" id="banner">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 col-sm-6">
-            <div class="block">
-              <img alt="" class="app-img img-responsive" src="https://placehold.it/338x338">
-            </div>
-          </div>
-          <div class="col-md-6 col-md-offset-1 col-sm-6">
-            <div class="block">
-              <h1>
-                Omorphia
-              </h1>
+          <div class="col-md-12">
+            <div class="block text-center">
+              <img class="img-responsive" src="assets/images/logo-index.png">
               <p>
                 Beauty that comes from your soul
               </p>
@@ -270,148 +258,76 @@
         </div>
       </div>
     </section>
+    <section id="site-photos">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="img-responsive" src="assets/images/site/10.jpg">
+          </div>
+          <div class="swiper-slide">
+            <img class="img-responsive" src="assets/images/site/18.jpg">
+          </div>
+          <div class="swiper-slide">
+            <img class="img-responsive" src="assets/images/site/3.jpg">
+          </div>
+          <div class="swiper-slide">
+            <img class="img-responsive" src="assets/images/site/7.jpg">
+          </div>
+          <div class="swiper-slide">
+            <img class="img-responsive" src="assets/images/site/11.jpg">
+          </div>
+          <div class="swiper-slide">
+            <img class="img-responsive" src="assets/images/site/13.jpg">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
     <section id="service">
       <div class="container">
         <div class="service-wrapper">
           <div class="row">
             <div class="col-md-3 col-sm-6">
               <div class="block wow fadeInRight" data-wow-delay="0.3s">
-                <div class="icon">
-                  <i class="fa fa-desktop"></i>
-                </div>
                 <h3>Spa</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, amet.</p>
               </div>
             </div>
             <div class="col-md-3 col-sm-6">
               <div class="block wow fadeInRight" data-wow-delay="0.6s">
-                <div class="icon">
-                  <i class="fa fa-paper-plane"></i>
-                </div>
                 <h3>Hair</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, amet.</p>
               </div>
             </div>
             <div class="col-md-3 col-sm-6">
               <div class="block wow fadeInRight" data-wow-delay="0.9s">
-                <div class="icon">
-                  <i class="fa fa-file-text"></i>
-                </div>
                 <h3>Makeup</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, amet.</p>
               </div>
             </div>
             <div class="col-md-3 col-sm-6">
               <div class="block wow fadeInRight" data-wow-delay="1.2s">
-                <div class="icon">
-                  <i class="fa fa-laptop"></i>
-                </div>
                 <h3>Laser</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, amet.</p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="feature">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay=".4s">
-            <h2 class="title">Our Focus on Your Beauty</h2>
-            <div class="feature-item">
-              <div class="media">
-                <div class="pull-left icon" href="#">
-                  <i class="fa fa-paint-brush"></i>
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading">All we do</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisici ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com</p>
-                </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="block wow fadeInRight" data-wow-delay="1.5s">
+                <h3>Slimming</h3>
               </div>
             </div>
-            <div class="feature-item">
-              <div class="media">
-                <div class="pull-left icon" href="#">
-                  <i class="fa fa-qrcode"></i>
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading">More stuff we do</h4>
-                  <p>Aipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="block wow fadeInRight" data-wow-delay="1.8s">
+                <h3>Face</h3>
               </div>
             </div>
-            <div class="feature-item">
-              <div class="media">
-                <div class="pull-left icon" href="#">
-                  <i class="fa fa-recycle"></i>
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading">We are Omorphia</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
-                </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="block wow fadeInRight" data-wow-delay="2.1s">
+                <h3>Hands &amp; Feet</h3>
               </div>
             </div>
-          </div>
-          <div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay=".4s">
-            <div class="block">
-              <img alt="" class="img-responsive" src="https://placehold.it/281x467">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="utility">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".6s">
-            <img alt="" class="img-responsive" src="https://placehold.it/482x437">
-          </div>
-          <div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-delay=".6s">
-            <div class="block">
-              <h2>Amazing Staff</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com Neque porro quisqua
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="utility-2">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay=".6s">
-            <div class="block">
-              <h2>Remarkable Service</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com Neque porro quisquam est,
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay=".6s">
-            <img alt="" class="img-responsive" src="https://placehold.it/492x430">
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="subscribe">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 wow fadeInDown" data-wow-delay=".6s">
-            <div class="block">
-              <div class="title text-center">
-                <h2>Stay Connected</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, non!</p>
+            <div class="col-md-3 col-sm-6">
+              <div class="block wow fadeInRight" data-wow-delay="2.4s">
+                <h3>Skin</h3>
               </div>
-              <form class="form-inline text-center col-sm-12 col-xs-12" role="form">
-                <div class="form-group">
-                  <input class="form-control" id="signup-form" type="text">
-                </div>
-                <a class="btn btn-default btn-signup" href="" type="submit">
-                  <i class="fa fa-paper-plane"></i>
-                </a>
-              </form>
             </div>
           </div>
         </div>

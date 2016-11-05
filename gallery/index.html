@@ -6,7 +6,7 @@
       <meta content="IE=edge" http-equiv="X-UA-Compatible">
         <title>
           Omorphia -
-          Gallery
+          Index
         </title>
         <meta content="" name="description">
         <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -19,6 +19,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css" rel="stylesheet">
         <link href="../css/main.css" rel="stylesheet">
         <link href="../css/responsive.css" rel="stylesheet">
         <link href="../css/hover.css" rel="stylesheet">
@@ -30,6 +31,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.4.3/tabletop.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.runtime.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.jquery.min.js"></script>
         <script src="../js/services.js"></script>
         <script src="../js/main.js"></script>
         <script src="../js/templates.js"></script>
@@ -70,6 +72,9 @@
         <div class="collapse navbar-collapse" id="nav">
           <ul class="nav navbar-nav">
             <li>
+              <a href="../about">About</a>
+            </li>
+            <li>
               <a aria-controls="services-drawer" data-target="#services-drawer" data-toggle="collapse" id="services" role="button">
                 Services
                 <span class="caret"></span>
@@ -90,18 +95,8 @@
                 </a>
               </li>
               <li>
-                <a href="#">
-                  <i class="fa fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-linkedin"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-google-plus"></i>
+                <a href="https://www.instagram.com/omorphiasalonpune/">
+                  <i class="fa fa-instagram"></i>
                 </a>
               </li>
             </ul>
@@ -250,22 +245,51 @@
       </div>
     </div>
     <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <ul class="nav nav-pills top-element-padding center-pills">
+            <li class="active" role="presentation">
+              <a href=".">Premises</a>
+            </li>
+            <li class="" role="presentation">
+              <a href="timeline">Timeline</a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div class="col-md-8 col-md-offset-2">
-        <div class="galleria"></div>
+        <div class="galleria">
+          <img src="../assets/images/site/1.jpg">
+          <img src="../assets/images/site/2.jpg">
+          <img src="../assets/images/site/3.jpg">
+          <img src="../assets/images/site/4.jpg">
+          <img src="../assets/images/site/5.jpg">
+          <img src="../assets/images/site/6.jpg">
+          <img src="../assets/images/site/7.jpg">
+          <img src="../assets/images/site/8.jpg">
+          <img src="../assets/images/site/9.jpg">
+          <img src="../assets/images/site/10.jpg">
+          <img src="../assets/images/site/11.jpg">
+          <img src="../assets/images/site/12.jpg">
+          <img src="../assets/images/site/13.jpg">
+          <img src="../assets/images/site/14.jpg">
+          <img src="../assets/images/site/15.jpg">
+          <img src="../assets/images/site/16.jpg">
+          <img src="../assets/images/site/17.jpg">
+          <img src="../assets/images/site/18.jpg">
+        </div>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/galleria.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/themes/classic/galleria.classic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/plugins/flickr/galleria.flickr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.7/plugins/history/galleria.history.min.js"></script>
+    <script src="../js/facebook/galleria.facebook.js"></script>
     <script>
       (function() {
         Galleria.run('.galleria', {
-          flickr: 'search:galleria',
           lightbox: true,
           responsive: true,
-          flickrOptions: {
-            sort: 'date-posted-asc'
-          }
+          autoplay: true
         });
       
       }).call(this);
