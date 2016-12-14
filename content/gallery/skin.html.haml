@@ -1,0 +1,18 @@
+.container
+  = render '/gallery_nav.*', gallery_item: @item
+  .col-md-8.col-md-offset-2
+    .galleria
+%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/galleria.min.js"}
+%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/themes/classic/galleria.classic.min.js"}
+%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.7/plugins/history/galleria.history.min.js"}
+%script{:src => "/js/facebook/galleria.facebook.js"}
+:coffee
+  Galleria.run '.galleria',
+    facebook: 'album:862419520526018'
+    lightbox: true
+    responsive: true
+    autoplay: true
+    facebookOptions: {
+      max: 50,
+      facebook_access_token: '1621804568133680|Q1sLaLs3QtCk3Ze6fTmS_P72imI'
+    }
